@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Popular Books Bookstore</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Popular Books Bookstore</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{listname}} <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/Hardcover-Fiction">Hardcover Fiction</a></li>
+          <li><a href="/Hardcover-Nonfiction">Hardcover Nonfiction</a></li>
+          <li><a href="/Childrens-Middle-Grade">Childrens Middle Grade</a></li>
+          <li><a href="/Young-Adult">Young Adult</a></li>
+          <li><a href="/Business-Books">Business Books</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<div class="container">
+	{{#each data}}
+	<section id="book">
+  <div class="row">
+		<div class="col-md-2 col-md-offset-3">
+			<img alt="{{title}}" class="book-image" src="{{image}}">
+		</div>
+		<div class="col-md-7">
+			
+			  
+			  <h3>{{title}}</h3>
+			  <h3>Best Seller rank: {{rank}}</h3>
+			  <p>{{snippet}}</p>
+			  <a class="btn btn-primary" href="http://www.amazon.com/gp/product/{{isbn10}}" target="blank">Buy in Amazon</a>
+			  <p>{{isbn10}}</p>
+        <p>{{isbn13}}</p>
+
+			
+		</div>
+	</div>
+  </section>
+	{{/each}}
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
