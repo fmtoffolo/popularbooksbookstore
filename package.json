@@ -6,6 +6,10 @@
   "dependencies": {
     "express": "3.x",
     "hbs":"*",
-    "request":"*"
-  }
+    "request":"*",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/fmtoffolo/popularbooksbookstore.git"
+  },
+  "main": "app.js"
 }

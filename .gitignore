@@ -1,7 +1,10 @@
 #################
 ## Eclipse
 #################
-node_modules/
+node_modules/.bin
+node_modules/express
+node_modules/hbs
+node_modules/request
 
 *.pydevproject
 .project
